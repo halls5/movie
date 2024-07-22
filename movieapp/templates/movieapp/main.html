@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세로 네비게이션 바</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            background-color: #141414;
+            color: #ffffff;
+            margin: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        .nav {
+            background-color: #181818; /* 약간 밝은 검은색으로 변경 */
+            height: 100vh; /* 전체 높이 */
+            width: 220px; /* 너비 조정 */
+            overflow-y: auto; /* 스크롤바 추가 */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .top-section {
+            margin-bottom: auto;
+        }
+        .top-section .nav-link:first-child {
+            margin-bottom: 20px; /* 유저 ID와 나머지 항목 사이의 간격 */
+        }
+        .bottom-section {
+            margin-top: auto;
+        }
+        .nav-link {
+            cursor: pointer;
+            color: #ffffff;
+            font-weight: 500;
+            padding: 15px 20px; /* 패딩 조정 */
+            border-bottom: 1px solid #404040; /* 하단 테두리 추가 */
+        }
+        .nav-link:hover {
+            color: #e50914;
+            background-color: #282828; /* 배경색 변경 */
+            text-decoration: none; /* 밑줄 제거 */
+        }
+        .nav-link.active {
+            background-color: #e50914;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .nav .collapse .nav-link {
+            padding-left: 35px;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: #2f2f2f; /* 콘텐츠 배경색 변경 */
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav flex-column">
+        <div class="top-section">
+            <a class="nav-link active" id="user-id">유저 ID</a>
+            <a class="nav-link" data-toggle="collapse" href="#recommendation-menu" role="button" aria-expanded="true" aria-controls="recommendation-menu">추천</a>
+            <div class="collapse show" id="recommendation-menu">
+                <a class="nav-link" href="keyword-page.html">키워드 페이지</a>
+                <a class="nav-link" href="questionnaire-page.html">질문지 페이지</a>
+            </div>
+            <a class="nav-link" href="main2">랜덤</a>
+            <a class="nav-link" href="analysis-page.html">분석</a>
+        </div>
+        <div class="bottom-section">
+            <a class="nav-link" href="profile-page.html">회원정보</a>
+        </div>
+    </nav>
+    <div class="content">
+        <h1>환영합니다!</h1>
+        <p>여기에 메인 콘텐츠가 표시됩니다.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
