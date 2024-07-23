@@ -24,7 +24,9 @@ urlpatterns = [
     path('', views.mainview),
     path('login', views.login),
     path('main2', views.main2),
-    path('her', views.templateLayout),
+    path('quest/', views.quest),
+    path('test1/', views.test1),
+
 
 
 

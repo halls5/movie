@@ -18,8 +18,15 @@ def main2(request):
                   "movieapp/main2.html",
                   {})
     
-def templateLayout(request):
+
+
+def quest(request):
     return render(request,
-                  "movieapp/extend/template_layout.html",
+                  "movieapp/quest.html",
+                  {})
+    
+def test1(request):
+    return render(request,
+                  "movieapp/quest2.html",
                   {})
     
