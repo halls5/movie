@@ -1,0 +1,27 @@
+{% extends "movieapp/extend/template_layout.html" %}
+{% block content %}
+<!-- Bootstrap CSS 링크를 추가해야 합니다. 이미 추가되어 있다면 생략합니다. -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<div class="container mt-4">
+  <div class="row">
+    {% for movie in movies %}
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <img src="{{ movie.poster_url }}" class="card-img-top" alt="{{ movie.title }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ movie.title }}</h5>
+            <p class="card-text">{{ movie.summary }}</p>
+            <!-- 여기에 추가적인 영화 정보를 표시할 수 있습니다. -->
+          </div>
+        </div>
+      </div>
+      {% if forloop.counter|divisibleby:3 and not forloop.last %}
+  </div>
+  <div class="row">
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock content %}

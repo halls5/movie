@@ -1,0 +1,64 @@
+{% extends "movieapp/extend/template_layout.html" %}
+<!-- 템플릿 추가하겠다.-->
+{% block content %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>질문 및 답변 페이지</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #141414;
+            color: white;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .question-box {
+            width: 80%;
+            background-color: #181818;
+            border-left: 4px solid #E50914;
+            padding: 16px;
+            margin-bottom: 16px; /* Adjusted margin for spacing between question and answer boxes */
+        }
+        .answer-boxes {
+            width: 80%;
+            display: flex;
+            justify-content: space-between; /* This will place the boxes in a row with space between them */
+        }
+        .answer-box {
+            background-color: #181818;
+            padding: 16px;
+            width: calc(50% - 10px); /* Adjust the width to fit two boxes in a row accounting for some space between them */
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .answer-box:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="question-box">
+        <h2>여기에 질문을 입력하세요</h2>
+    </div>
+    <div class="answer-boxes">
+        <div class="answer-box">답변 1</div>
+        <div class="answer-box">답변 2</div>
+    </div>
+</div>
+
+</body>
+</html>
+
+{% endblock content %}

@@ -1,0 +1,14 @@
+
+/* 카테고리(네비게이션) 영역*/
+#nav {
+    /* 배경색 */
+    background-color: rgb(4, 5, 0);
+    /* 폰트 색상 */
+    color:white;
+    /* 텍스트 정렬 */
+    text-align: center;
+    /* 영역의 안쪽 여백 상하좌우 모두 적용 */
+    padding :5px;
+    /* 영역의 높이 */
+    height: 30px;
+}

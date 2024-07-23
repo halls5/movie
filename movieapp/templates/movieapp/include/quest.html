@@ -1,0 +1,56 @@
+{% extends "movieapp/extend/template_layout.html" %}
+{% block content %} -->
+<!-- Bootstrap CSS 링크를 추가해야 합니다. 이미 추가되어 있다면 생략합니다. -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>질문 및 대답 박스</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  .question-box, .answer-box {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  .question-box {
+    border-left: 4px solid #007bff;
+  }
+  .answer-box:nth-child(even) {
+    border-left: 4px solid #28a745;
+  }
+  .answer-box:nth-child(odd) {
+    border-left: 4px solid #dc3545;
+  }
+</style>
+</head>
+<body>
+
+<div class="question-box">
+  <h2>질문</h2>
+  <p>여기에 질문 내용이 들어갑니다.</p>
+</div>
+
+<div class="answer-box">
+  <h2>대답 1</h2>
+  <p>여기에 첫 번째 대답 내용이 들어갑니다.</p>
+</div>
+
+<div class="answer-box">
+  <h2>대답 2</h2>
+  <p>여기에 두 번째 대답 내용이 들어갑니다.</p>
+</div>
+
+</body>
+</html>
+
+{% endblock content %}

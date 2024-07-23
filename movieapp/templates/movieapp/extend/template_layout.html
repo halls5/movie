@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 페이지 레이아웃</title>
+    <link rel = "stylesheet" href= "{% static 'movieapp/css/layout.css'%}">
+    
+    <!-- Bootstrap 적용하기 -->
+    <!-- Bootstrap에서 사용할 스타일 (css) 라이브러리 적용하기 -->
+    <link rel = "stylesheet" href = "{% static 'movieapp/bootstrap/css/bootstrap.min.css' %}">
+    <!-- Bootstrap에서 사용할 javascript(jQuery) 라이브러리 적용하기 -->
+    <script type = "text/javascript" src="{% static 'movieapp/js/jquery-3.7.1.min.js' %}"></script>
+
+    <!-- Bootstrap 적용 끝-->
+
+</head>
+<body>
+    
+    <!-- Layout 구성하기 -->
+    <!-- 가장 상단 영역 -->
+   
+    <!-- 카테고리 메뉴(네비게이션) 영역 -->
+    {% comment %} <div id="nav"> {% endcomment %}
+    <div>
+        {% include "movieapp/include/nav.html" %}
+
+    </div>
+    <!-- 본문 영역(내용이 항상 바뀌는 영역)-->
+    <!-- 
+        block content : 외부 파일의 내용을 content라는 이름을 가지는
+                        block 영역에 추가 시키게 합니다. 
+                      : (추가되는 내용은 태그코드가 아니며, 
+                        실행 결과가 추가되는 방식)    
+    --> 
+    <hr>
+
+    {% block content %}
+     이곳은 extends의 block 영역으로 처리되는 영역 입니다. <br>
+     이 페이지에서는 현재 html의 모든 내용이 보입니다. <br>
+     다른 페이지에서는 현재 html 페이지를 extends 해서 사용하게 됩니다.<br> 
+     다른 페이지에서는 [본문 영역]만 바뀌고 나머지 영역은 동일하게 보여집니다. 
+     {% endblock  %}
+     
+
+
+
+
+    <!-- Bootstrap에서 사용할 javascript(jQuery) 라이브러리 적용하기 -->
+    <script type = "text/javascript" src="{% static 'movieapp/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+</html>
