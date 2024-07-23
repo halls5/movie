@@ -20,15 +20,20 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            align-items: center; /* 중앙 정렬 */
+            padding-top: 20px;
         }
         .top-section {
             margin-bottom: auto;
+            width: 100%;
+            text-align: center;
         }
         .top-section .nav-link:first-child {
             margin-bottom: 20px;
         }
         .bottom-section {
             margin-top: auto;
+            width: 100%;
         }
         .nav-link {
             cursor: pointer;
@@ -36,6 +41,7 @@
             font-weight: 500;
             padding: 15px 20px;
             border-bottom: 1px solid #404040;
+            display: block;
         }
         .nav-link:hover {
             color: #e50914;
@@ -50,12 +56,18 @@
         .nav .collapse .nav-link {
             padding-left: 35px;
         }
+        .logo {
+            width: 180px;
+            height: auto;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
     <nav class="nav flex-column">
         <div class="top-section">
-            <a class="nav-link active" id="user-id">유저 ID</a>
+            <a href="main.html"><img src="movieapp/images/logo.png" alt="로고" class="logo"></a> <!-- 로고 이미지 추가 -->
+            <a class="nav-link active" id="user-id">유저 I</a>
             <a class="nav-link" data-toggle="collapse" href="#recommendation-menu" role="button" aria-expanded="true" aria-controls="recommendation-menu">추천</a>
             <div class="collapse show" id="recommendation-menu">
                 <a class="nav-link" href="keyword-page.html">키워드 페이지</a>
