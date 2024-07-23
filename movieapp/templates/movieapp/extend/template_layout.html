@@ -1,45 +1,35 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> 페이지 레이아웃</title>
-    <link rel = "stylesheet" href= "{% static 'movieapp/css/layout.css'%}">
-    
-    <!-- Bootstrap 적용하기 -->
-    <!-- Bootstrap에서 사용할 스타일 (css) 라이브러리 적용하기 -->
-    <link rel = "stylesheet" href = "{% static 'movieapp/bootstrap/css/bootstrap.min.css' %}">
-    <!-- Bootstrap에서 사용할 javascript(jQuery) 라이브러리 적용하기 -->
-    <script type = "text/javascript" src="{% static 'movieapp/js/jquery-3.7.1.min.js' %}"></script>
+{% extends "movieapp/extend/template_layout.html" %}
 
-    <!-- Bootstrap 적용 끝-->
+{% block content %}
+    <style>
+        .poster-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-content: flex-start;
+        }
 
-</head>
-<body>
-    
-    <!-- Layout 구성하기 -->
-    <!-- 가장 상단 영역 -->
-    
-    <!-- 카테고리 메뉴(네비게이션) 영역 -->
-    {% comment %} <div id="nav"> {% endcomment %}
-    <div>
-        {% include "movieapp/include/nav.html" %}
+        .poster {
+            flex: 1 1 calc(33.333% - 40px);
+            max-width: calc(33.333% - 40px);
+            background-color: #444;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #888;
+            color: #fff;
+            font-size: 24px;
+        }
+    </style>
 
+    <div class="poster-container">
+        <div class="poster">Poster 1</div>
+        <div class="poster">Poster 2</div>
+        <div class="poster">Poster 3</div>
+        <div class="poster">Poster 4</div>
+        <div class="poster">Poster 5</div>
+        <div class="poster">Poster 6</div>
     </div>
-    <!-- 본문 영역(내용이 항상 바뀌는 영역)-->
-    <!-- 
-        block content : 외부 파일의 내용을 content라는 이름을 가지는
-                        block 영역에 추가 시키게 합니다. 
-                      : (추가되는 내용은 태그코드가 아니며, 
-                        실행 결과가 추가되는 방식)    
-    --> 
-    <hr>
-
-   
-
-    <!-- Bootstrap에서 사용할 javascript(jQuery) 라이브러리 적용하기 -->
-    <script type = "text/javascript" src="{% static 'movieapp/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-
-</body>
-</html>
+{% endblock content %}

@@ -22,4 +22,7 @@ def templateLayout(request):
     return render(request,
                   "movieapp/extend/template_layout.html",
                   {})
-    
+def signup(request):
+    return render(request,
+                  "movieapp/signup.html",
+                  {})
