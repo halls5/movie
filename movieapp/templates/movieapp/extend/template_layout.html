@@ -36,13 +36,19 @@
     --> 
     <hr>
 
-    
+    {% block content %}
+     이곳은 extends의 block 영역으로 처리되는 영역 입니다. <br>
+     이 페이지에서는 현재 html의 모든 내용이 보입니다. <br>
+     다른 페이지에서는 현재 html 페이지를 extends 해서 사용하게 됩니다.<br> 
+     다른 페이지에서는 [본문 영역]만 바뀌고 나머지 영역은 동일하게 보여집니다. 
+     {% endblock  %}
+     
 
 
 
 
     <!-- Bootstrap에서 사용할 javascript(jQuery) 라이브러리 적용하기 -->
-    <script type = "text/javascript" src="{% static 'mainapp/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script type = "text/javascript" src="{% static 'movieapp/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
 </body>
 </html>
