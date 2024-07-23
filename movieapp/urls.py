@@ -27,7 +27,4 @@ urlpatterns = [
     path('quest/', views.quest),
     path('test1/', views.test1),
 
-
-
-
 ]

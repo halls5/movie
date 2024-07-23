@@ -61,11 +61,14 @@
 <body>
     <nav class="nav flex-column">
         <div class="top-section">
+            {% load static %}
+            <a href="/main"><img src="{% static 'movieapp/images/logo.png' %}" alt="로고" class="logo"></a> <!-- 로고 이미지 추가 -->
+
             <a class="nav-link active" id="user-id">유저 ID</a>
             <a class="nav-link" data-toggle="collapse" href="#recommendation-menu" role="button" aria-expanded="true" aria-controls="recommendation-menu">추천</a>
             <div class="collapse show" id="recommendation-menu">
                 <a class="nav-link" href="keyword-page.html">키워드 페이지</a>
-                <a class="nav-link" href="/quest/">질문지 페이지</a>
+                <a class="nav-link" href="/recomendation">질문지 페이지</a>
             </div>
             <a class="nav-link" href="random-page.html">랜덤</a>
             <a class="nav-link" href="analysis-page.html">분석</a>

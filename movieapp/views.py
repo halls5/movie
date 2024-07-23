@@ -27,6 +27,6 @@ def quest(request):
     
 def test1(request):
     return render(request,
-                  "movieapp/quest2.html",
+                  "movieapp/quest17.html",
                   {})
     

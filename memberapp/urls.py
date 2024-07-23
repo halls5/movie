@@ -17,15 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from django.urls import path, include
 
+from . import views 
+
 
 urlpatterns = [
-    path('', include('memberapp.urls')),
-    path('main', include('mainapp.urls')),
-    path('movie', include('movieapp.urls')),
-    path('recomendation', include('recoapp.urls')),
-    path('visual', include('visualapp.urls')),
+   path('', views.login),
 
 
-    path('admin/', admin.site.urls),
+
 
 ]
