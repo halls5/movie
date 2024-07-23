@@ -21,10 +21,20 @@ from . import views
 
 
 urlpatterns = [
+<<<<<<< HEAD
     path('', views.mainview),
     path('login', views.login),
     path('main2', views.main2),
     path('quest/', views.quest),
     path('test1/', views.test1),
+=======
+    path('mainview', views.mainview),
+    path('', views.login),
+    path('main2', views.main2),
+    path('signup', views.signup),
+    
+
+
+>>>>>>> 64437b19bcb94f6e96d46e2fa554c663b7942d49
 
 ]

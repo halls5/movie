@@ -32,10 +32,13 @@ ALLOWED_HOSTS = ['127.0.0.1']
 
 INSTALLED_APPS = [
     'movieapp',
+<<<<<<< HEAD
     'mainapp',
     'memberapp',
     'recoapp',
     'visualapp',
+=======
+>>>>>>> 64437b19bcb94f6e96d46e2fa554c663b7942d49
     
     'django.contrib.admin',
     'django.contrib.auth',

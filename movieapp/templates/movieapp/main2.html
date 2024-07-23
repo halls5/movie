@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends "movieapp/extend/template_layout.html" %}
 {% block content %}
 <!-- Bootstrap CSS 링크를 추가해야 합니다. 이미 추가되어 있다면 생략합니다. -->
@@ -25,3 +26,39 @@
 </div>
 
 {% endblock content %}
+=======
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인 페이지</title>
+    <style>
+        body {
+            display: flex;
+            background-color: #141414; /* 메인 페이지 배경색 */
+            color: #ffffff;
+            margin: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        iframe {
+            border: none;
+            width: 220px;
+            height: 100vh;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: #2f2f2f; /* 콘텐츠 배경색 */
+        }
+    </style>
+</head>
+<body>
+    <iframe src="movieapp/include/nav.html"></iframe>
+    <div class="content">
+        <h1>환영합니다!</h1>
+        <p>여기에 메인 콘텐츠가 표시됩니다.</p>
+    </div>
+</body>
+</html>
+>>>>>>> 64437b19bcb94f6e96d46e2fa554c663b7942d49

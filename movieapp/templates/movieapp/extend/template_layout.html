@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -52,3 +53,40 @@
 
 </body>
 </html>
+=======
+{% extends "movieapp/extend/template_layout.html" %}
+
+{% block content %}
+    <style>
+        .poster-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-content: flex-start;
+        }
+
+        .poster {
+            flex: 1 1 calc(33.333% - 40px);
+            max-width: calc(33.333% - 40px);
+            background-color: #444;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #888;
+            color: #fff;
+            font-size: 24px;
+        }
+    </style>
+
+    <div class="poster-container">
+        <div class="poster">Poster 1</div>
+        <div class="poster">Poster 2</div>
+        <div class="poster">Poster 3</div>
+        <div class="poster">Poster 4</div>
+        <div class="poster">Poster 5</div>
+        <div class="poster">Poster 6</div>
+    </div>
+{% endblock content %}
+>>>>>>> 64437b19bcb94f6e96d46e2fa554c663b7942d49
