@@ -7,18 +7,13 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-<<<<<<< HEAD
             display: flex;
             background-color: #141414;
-=======
-            background-color: #181818; /* 네비게이션 바 배경색 */
->>>>>>> 64437b19bcb94f6e96d46e2fa554c663b7942d49
             color: #ffffff;
             margin: 0;
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         }
         .nav {
-<<<<<<< HEAD
             position: fixed; /* 스크롤시 고정 */
             top: 0;
             left: 0;
@@ -38,35 +33,11 @@
         }
         .bottom-section {
             margin-top: auto;
-=======
-            background-color: #181818;
-            height: 100vh;
-            width: 220px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center; /* 중앙 정렬 */
-            padding-top: 20px;
-        }
-        .top-section {
-            margin-bottom: auto;
-            width: 100%;
-            text-align: center;
-        }
-        .top-section .nav-link:first-child {
-            margin-bottom: 20px;
-        }
-        .bottom-section {
-            margin-top: auto;
-            width: 100%;
->>>>>>> 64437b19bcb94f6e96d46e2fa554c663b7942d49
         }
         .nav-link {
             cursor: pointer;
             color: #ffffff;
             font-weight: 500;
-<<<<<<< HEAD
             padding: 15px 20px; /* 패딩 조정 */
             border-bottom: 1px solid #404040; /* 하단 테두리 추가 */
         }
@@ -74,16 +45,6 @@
             color: #e50914;
             background-color: #282828; /* 배경색 변경 */
             text-decoration: none; /* 밑줄 제거 */
-=======
-            padding: 15px 20px;
-            border-bottom: 1px solid #404040;
-            display: block;
-        }
-        .nav-link:hover {
-            color: #e50914;
-            background-color: #282828;
-            text-decoration: none;
->>>>>>> 64437b19bcb94f6e96d46e2fa554c663b7942d49
         }
         .nav-link.active {
             background-color: #e50914;
@@ -93,15 +54,12 @@
         .nav .collapse .nav-link {
             padding-left: 35px;
         }
-<<<<<<< HEAD
         .content {
             flex-grow: 1;
             padding: 20px;
             background-color: #2f2f2f; /* 콘텐츠 배경색 변경 */
             margin-left: 70px; /* 네비게이션 바 너비 만큼 왼쪽 마진 추가 */
         }
-=======
->>>>>>> 64437b19bcb94f6e96d46e2fa554c663b7942d49
         .logo {
             width: 180px;
             height: auto;
@@ -112,7 +70,6 @@
 <body>
     <nav class="nav flex-column">
         <div class="top-section">
-<<<<<<< HEAD
             {% load static %}
             <a href="/main"><img src="{% static 'movieapp/images/logo.png' %}" alt="로고" class="logo"></a> <!-- 로고 이미지 추가 -->
             <a class="nav-link active" id="user-id">유저 ID</a>
@@ -122,23 +79,12 @@
                 <a class="nav-link" href="/recomendation">질문지 페이지</a>
             </div>
             <a class="nav-link" href="/recomendation/random">랜덤</a>
-=======
-            <a href="main.html"><img src="movieapp/images/logo.png" alt="로고" class="logo"></a> <!-- 로고 이미지 추가 -->
-            <a class="nav-link active" id="user-id">유저 I</a>
-            <a class="nav-link" data-toggle="collapse" href="#recommendation-menu" role="button" aria-expanded="true" aria-controls="recommendation-menu">추천</a>
-            <div class="collapse show" id="recommendation-menu">
-                <a class="nav-link" href="keyword-page.html">키워드 페이지</a>
-                <a class="nav-link" href="questionnaire-page.html">질문지 페이지</a>
-            </div>
-            <a class="nav-link" href="main2">랜덤</a>
->>>>>>> 64437b19bcb94f6e96d46e2fa554c663b7942d49
             <a class="nav-link" href="analysis-page.html">분석</a>
         </div>
         <div class="bottom-section">
             <a class="nav-link" href="profile-page.html">회원정보</a>
         </div>
     </nav>
-<<<<<<< HEAD
     <div class="content">
         <!-- 여기에 콘텐츠를 추가하세요 -->
     </div>
@@ -146,7 +92,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-=======
->>>>>>> 64437b19bcb94f6e96d46e2fa554c663b7942d49
 </body>
 </html>

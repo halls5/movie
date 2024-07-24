@@ -18,7 +18,6 @@ def main2(request):
                   "movieapp/main2.html",
                   {})
     
-<<<<<<< HEAD
 
 
 def quest(request):
@@ -31,13 +30,3 @@ def test1(request):
                   "movieapp/quest17.html",
                   {})
     
-=======
-def templateLayout(request):
-    return render(request,
-                  "movieapp/extend/template_layout.html",
-                  {})
-def signup(request):
-    return render(request,
-                  "movieapp/signup.html",
-                  {})
->>>>>>> 64437b19bcb94f6e96d46e2fa554c663b7942d49

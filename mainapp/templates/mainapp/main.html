@@ -39,22 +39,16 @@
             object-fit: cover; /* 이미지를 부모 요소에 맞추기 */
         }
         .ranking {
-            text-align: center;
-            margin-top: 10px;
-            font-size: 30px; /* 기본 글씨 크기 */
-            position: relative;
-        }
-        
-        .ranking-1 {
-            font-size: 50px; /* 1위 글씨 크기 */
-        }
-
-        .ranking-2 {
-            font-size: 45px; /* 2위 글씨 크기 */
-        }
-
-        .ranking-3 {
-            font-size: 40px; /* 3위 글씨 크기 */
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            z-index: 10; /* 이미지 위로 오도록 설정 */
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 5rem; /* 큰 글씨 크기 */
+            font-style: italic;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            transform: rotate(-10deg); /* 텍스트 살짝 기울이기 */
         }
 
         .ranking-1::after, .ranking-2::after, .ranking-3::after {
