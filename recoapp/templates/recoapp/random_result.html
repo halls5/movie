@@ -1,0 +1,34 @@
+{% extends "movieapp/extend/template_layout.html" %}
+<!-- 템플릿 추가하겠다.-->
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" style="text-align: center;" >
+        <br>
+        <br>
+        <h2> 전국 제패를 꿈꾸는 북산고 농구부 5인방의 꿈과 열정, </h2>
+             <h2>멈추지 않는 도전을 그린 영화</h2>
+        <br>
+      
+        {% load static %}
+        <a href="random_result"><img src="{% static 'movieapp/images/slamdunk.webp' %}" alt="로고" style="width: 50%" class="logo"
+            style="display: flex; justify-content: center;" >
+           </a> 
+        <h3>    제목 : 슬램덩크  | 개봉년도 :  |  장르:  </h3>
+        
+
+        <hr>
+        <br>
+        
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock content %}

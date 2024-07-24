@@ -1,0 +1,40 @@
+{% extends "movieapp/extend/template_layout.html" %}
+<!-- 템플릿 추가하겠다.-->
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: Courier New, Monospace;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="text-align: center;" >
+    <br>
+    <br>
+    <h2>    추천 영화 랜덤 박스 ♫͙◟̊₍ꃓ₎◞◟₍ꃔ₎◞̊♫͙ </h2>
+    <hr>
+    <br>
+    {% load static %}
+    <a href="random_result"><img src="{% static 'movieapp/images/randombox.webp' %}" alt="로고" style="width: 50%" class="logo"
+        style="display: flex; justify-content: center;" >
+       </a> <!-- 로고 이미지 추가 -->
+    </div>
+</div>
+</body>
+</html>
+
+{% endblock content %}

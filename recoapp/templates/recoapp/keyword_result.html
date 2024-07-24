@@ -1,0 +1,155 @@
+{% extends "movieapp/extend/template_layout.html" %}
+<!-- 템플릿 추가하겠다.-->
+{% block content %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>넷플릭스 스타일 페이지네이션</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #141414;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+  }
+  .data-container {
+    display: grid;
+    grid-template-columns: repeat(auto, minmax(100px, 1fr));
+    gap: 15px;
+    margin-bottom: px;
+  }
+  .data-item {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  .pagination li {
+    margin: 5px;
+    cursor: pointer;
+  }
+  .page-item {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    background-color: #808080;
+    color: white;
+  }
+  .page-item.active {
+    background-color: #e50914;
+  }
+  .arrow {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    background-color: #808080;
+    color: white;
+  }
+</style>
+</head>
+<body>
+<div class="container" style="text-align: center;">
+<div id="data-container" class="data-container">
+  <!-- 여기에 데이터가 표시됩니다 -->
+</div>
+<br>
+<ul id="pagination" class="pagination">
+  <li class="arrow" id="prev-page">&laquo;</li>
+  <!-- 페이지 번호는 여기에 자동으로 생성됩니다 -->
+  <li class="arrow" id="next-page">&raquo;</li>
+</ul>
+</div>
+
+<script>
+  const data = Array.from({ length: 200 }, (_, i) => `데이터 ${i + 1} 영화
+    제목, 장르, 개봉년도,ㅇㅇㅇㅇㅇㅇ`);
+  const itemsPerPage = 15;
+  let currentPage = 1;
+  let currentBlock = 0;
+
+
+  function displayData(page) {
+    const start = (page - 1) * itemsPerPage;
+    const end = page * itemsPerPage;
+    const dataContainer = document.getElementById('data-container');
+    dataContainer.innerHTML = '';
+
+    for (let i = start; i < end && i < data.length; i++) {
+      const div = document.createElement('div');
+      div.className = 'data-item';
+      div.textContent = data[i];
+      dataContainer.appendChild(div);
+    }
+  }
+
+  function setupPagination(totalItems, itemsPerPage) {
+    updatePagination();
+  }
+
+  function updatePagination() {
+    const pageCount = Math.ceil(data.length / itemsPerPage);
+    const blockCount = Math.ceil(pageCount / 5);
+    const startPage = currentBlock * 5 + 1;
+    const endPage = startPage + 5 <= pageCount ? startPage + 5 : pageCount + 1;
+    const paginationContainer = document.getElementById('pagination');
+    paginationContainer.innerHTML = ''; // Clear existing pagination
+
+    if (currentBlock > 0) {
+      const prevSet = document.createElement('li');
+      prevSet.className = 'arrow';
+      prevSet.textContent = '«';
+      prevSet.onclick = () => {
+        currentBlock--;
+        updatePagination();
+        displayData(startPage - 5);
+      };
+      paginationContainer.appendChild(prevSet);
+    }
+
+    for (let i = startPage; i < endPage; i++) {
+      const pageItem = document.createElement('li');
+      pageItem.textContent = i;
+      pageItem.className = 'page-item';
+      if (i === currentPage) {
+        pageItem.classList.add('active');
+      }
+      pageItem.onclick = () => {
+        currentPage = i;
+        displayData(i);
+        updatePagination();
+      };
+      paginationContainer.appendChild(pageItem);
+    }
+
+    if (currentBlock < blockCount - 1) {
+      const nextSet = document.createElement('li');
+      nextSet.className = 'arrow';
+      nextSet.textContent = '»';
+      nextSet.onclick = () => {
+        currentBlock++;
+        updatePagination();
+        displayData(startPage + 5);
+      };
+      paginationContainer.appendChild(nextSet);
+    }
+  }
+
+  displayData(currentPage);
+  setupPagination(data.length, itemsPerPage);
+</script>
+
+</body>
+</html>
+{% endblock content %}

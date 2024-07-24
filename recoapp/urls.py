@@ -22,6 +22,13 @@ from . import views
 
 urlpatterns = [
     path('', views.quest),
+    path('/keyword', views.keyword),
+    path('/random', views.random),
+    path('/random_result', views.random_result),
+    path('/keyword_result', views.keyword_result),
+
+
+
 
 
 

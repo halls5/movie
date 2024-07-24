@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>로그인 페이지</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body {
+  display: flex;
+  flex-direction: column; /* 방향을 column으로 설정 */
+  /*align-items: center; /* 중앙 정렬 */
+  /*justify-content: center; /* 중앙 정렬 */
+  height: 100vh;
+  background-color: #141414;
+  color: #ffffff;
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.form-signin button {
+  background-color: #e50914;
+  color: #ffffff;
+  border: none;
+}
+.register-btn {
+    color: #ffffff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+  .register-btn:hover {
+    color: #e50914;
+  }
+</style>
+</head>
+<body>
+
+<div class="logo">
+<div>
+    {% load static %}
+    <a href="/main"><img src="{% static 'movieapp/images/logo2.png' %}" alt="로고" width="50" height="50" class="logo"
+        style="display: flex; " >
+        </a>    
+</div>
+</div>
+
+<div class="form-signin">
+  <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">내정보 수정</h1>
+  <input type="email" id="inputEmail" class="form-control" placeholder="이름" required autofocus>
+  <input type="password" id="inputPassword" class="form-control" placeholder="비밀번호" required>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">수정</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>넷플릭스 스타일 인터페이스</title>
+<style>
+  body {
+    margin: 0;
+    background-color: #000; /* 배경색 검은색으로 설정 */
+    color: white; /* 글자색 흰색으로 설정 */
+    font-family: Arial, sans-serif;
+  }
+  .header {
+    padding: 10px;
+    background-color: #141414;
+    text-align: center; /* 로고를 중앙 정렬 */
+  }
+  .logo img {
+    height: 50px;
+  }
+  .user-info {
+    text-align: center; /* 이름과 아이디 중앙 정렬 */
+    margin-top: 10px; /* 로고와의 간격 설정 */
+  }
+  .data-container {
+    padding: 20px;
+  }
+  .data-row {
+    border-bottom: 1px solid #444; /* 데이터 행 구분선 */
+    padding: 10px 0;
+  }
+  .parent {
+    position: relative;
+  }
+  
+  .my-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+    color: black;
+  }
+  .my-button:hover {
+    background-color: red;
+    color: white;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+   <div class="logo">
+    {% load static %}
+    <a href="/main"><img src="{% static 'movieapp/images/logo.png' %}" alt="로고" width="50" height="50" class="logo"
+        style="display: flex; justify-content: center;" >
+       </a> 
+    <!-- <div justify-content: right;>
+    <a href="/main"> 내정보 수정    </a> 
+   </div> -->
+
+   <a href="/correction">
+    <button class="my-button">내 정보 수정</button>
+    </a>
+    
+
+  </div>
+  <div class="user-info">
+    <div>홍길동님의 마이페이지</div>
+    <br>
+    <div>ID: hong123</div>
+  </div>
+</div>
+
+<div class="data-container">
+  <!-- 데이터 한 줄 예시 -->
+  <div class="data-row">
+    <h3>홍길동님이 저장한 컨텐츠</h3>
+ 
+    <br>
+    <span>1. 영화 제목: 인셉션 | 장르 : ㅇㅇ | 개봉년도 : ㅇㅇ</span> <!-- 데이터 예시, 실제 데이터로 변경 필요 -->
+    <br>
+    <span>2. 영화 제목: 인셉션</span>     <br>
+    <span>3. 영화 제목: 인셉션</span>    <br>    <!-- 데이터 예시, 실제 데이터로 변경 필요 -->
+    <span>4. 영화 제목: 인셉션</span>    <br>    <!-- 데이터 예시, 실제 데이터로 변경 필요 -->
+
+  </div>
+</div>
+
+</body>
+</html>

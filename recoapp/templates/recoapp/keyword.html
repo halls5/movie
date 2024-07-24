@@ -1,0 +1,100 @@
+{% extends "movieapp/extend/template_layout.html" %}
+<!-- 템플릿 추가하겠다.-->
+{% block content %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Netflix Style Keyword Selector</title>
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+  .keyword-btn {
+    background-color: #fff;
+    border: 2px solid #333;
+    color: #333;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 15px; /* 버튼을 둥글게 만듭니다 */
+    outline: none;
+  }
+  .keyword-btn.selected {
+    background-color: #e50914;
+    color: white;
+  }
+  #select-button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px; /* 키워드와 간격을 조정합니다 */
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+    <div id="keyword-instructions"><h2>선호하는 키워드를 선택하세요!</h2></div>
+    <br>
+    <br>
+    <div id="keyword-container">
+    <!-- 키워드 버튼들 -->
+    <!-- 버튼을 생성하는 스크립트가 자동으로 생성합니다 -->
+    </div>
+
+    <button id="select-button" onclick="location.href='recomendation/keyword_result'">선택하기</button>
+</div>
+
+<script>
+  // 선택된 키워드의 개수를 추적하는 변수
+  let selectedCount = 0;
+
+  // 키워드 버튼을 생성하는 함수
+  function createKeywordButtons(numOfKeywords) {
+    const container = document.getElementById('keyword-container');
+    for (let i = 1; i <= numOfKeywords; i++) {
+      let button = document.createElement('button');
+      button.textContent = `키워드${i}`;
+      button.className = 'keyword-btn';
+      button.onclick = function() {
+        // 이미 선택된 경우 선택 해제
+        if (button.classList.contains('selected')) {
+          button.classList.remove('selected');
+          selectedCount -= 1;
+        } else {
+          // 2개 이상 선택하지 못하게 제한
+          if (selectedCount < 2) {
+            button.classList.add('selected');
+            selectedCount += 1;
+          }
+        }
+      };
+      container.appendChild(button);
+    }
+  }
+
+  // 키워드 버튼 생성
+  createKeywordButtons(17);
+
+  // 선택하기 버튼 이벤트
+  document.getElementById('select-button').onclick = function() {
+    // 여기에 선택된 키워드를 처리하는 로직을 추가하세요
+    
+    alert('키워드가 선택되었습니다!');
+  };
+</script>
+
+</body>
+</html>
+{% endblock content %}
+
+

@@ -1,3 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+def visual(request):
+    return render(request,
+                  "visualapp/visual.html",
+                  {})

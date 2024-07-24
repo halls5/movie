@@ -5,3 +5,13 @@ def login(request):
     return render(request,
                   "memberapp/login.html",
                   {})
+    
+def mypage(request):
+    return render(request,
+                  "memberapp/mypage.html",
+                  {})
+    
+def correction(request):
+    return render(request,
+                  "memberapp/correction.html",
+                  {})

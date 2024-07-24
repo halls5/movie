@@ -21,10 +21,8 @@ from . import views
 
 
 urlpatterns = [
-    # path('', views.mainview),
+    path('', views.visual),
    
-
-
 
 
 ]
